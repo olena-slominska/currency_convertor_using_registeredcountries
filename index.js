@@ -19,7 +19,7 @@ const convertCurrency = async (fromCurrency, toCurrency, amount) => {
 };
 
 const app = express();
-const port = 5000;
+const port = process.env.port;
 
 app.get('/', async (req, res) => {
     const {fromCurrency, toCurrency, amount} = req.query;
